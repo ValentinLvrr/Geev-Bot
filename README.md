@@ -1,19 +1,16 @@
 ![banner_geev](https://www.don.fr/wp-content/uploads/2019/11/Image_Maureen-1.jpg)
 
-# Qu-es ce que Geev ?
-[**Geev**]() est la plateforme n°1 de don d'objets ( livres, vetements, meubles, ...) entre particuliers en France.
-
-# En quoi consiste le robot
-Le Geev-Bot va dénicher toutes les nouvelles annonces publiées dans un rayon de x km autour de chez vous.
+# What is Geev?
+[**Geev**]() is the Number 1 of platform for donating objects (books, clothing, furniture, etc.) between individuals in France.
 
 # Installation & Configuration
-### 1: Clonner le repo
+### 1: Clone the repository
 ```
 git clone https://github.com/ValentinLvrr/Geev-Bot
 cd Geev-Bot
 ```
 
-### 2: Editer le fichier `config.py`
+### 2: Edit `config.py`
 ![searchbar_geev](https://i.ibb.co/5ngn2Z6/Capture-d-cran-2023-01-18-213025.png)
 ```py
 DISTANCE = str(15000)# 15km
@@ -23,14 +20,13 @@ GEEV_URL = '' + DISTANCE # coupez l'url de la page d'acceuille en incluant "&dis
 TOKEN = ""
 ```
 
-# Lancement
-Après avoir configuré le robot dans le fichier `config.py` :
+# Launching
 ```
-python bot.py
+python3 bot.py
 ```
 
 ### Discord :
-![resultat](https://i.ibb.co/cNt2XtQ/Capture-d-cran-2023-01-18-213332.png)
+![result](https://i.ibb.co/cNt2XtQ/Capture-d-cran-2023-01-18-213332.png)
 
 ### Terminal :
-![resultat_console](https://i.ibb.co/QndbXmn/Capture-d-cran-2023-01-19-083431.png)
+![terminal_result](https://i.ibb.co/QndbXmn/Capture-d-cran-2023-01-19-083431.png)
