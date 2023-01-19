@@ -1,6 +1,6 @@
 from discord.ext import commands
 from datetime import datetime
-from config import TOKEN, CHANNEL_ID, DISTANCE, INTERVAL
+from config import TOKEN, CHANNEL_ID, DISTANCE
 from os import system, name
 import asyncio
 import discord
@@ -14,7 +14,7 @@ def clear():
     else:
         _ = system('clear')
 
-def getTime(time):
+def get_time(time):
     return f"{time.hour}:{time.minute}"
 
 async def change_presence(total):
@@ -27,14 +27,14 @@ def make_embed(name,distance,link,picture,pfp):
         name=f"""
 🧤  **Nom**  :  `{name}`
 📍  **Distance**  :  `{distance}`
-🕒  **Heure**  :  `{getTime(datetime.now())}`
+🕒  **Heure**  :  `{get_time(datetime.now())}`
     """, 
         value=f"🔗 [**Voir**]({link})",
         inline=True
     )
     embed.set_footer(
         icon_url="https://cdn.discordapp.com/avatars/768049100238225418/996af5baea342ee969e131eabd2e70aa.webp?size=80",
-        text="Merci d'utiliser mon programme <3"
+        text="Merci d'utiliser mon programme :D"
     )
     embed.set_image(url=picture)
     embed.set_thumbnail(url=pfp)
@@ -65,13 +65,13 @@ async def on_ready():
 
     while True:
 
-        time = getTime(datetime.now())
+        time = get_time(datetime.now())
         print(f"{time} | 📨 | Requete")
 
         for i in geev.search():
             if i not in sent_items:
 
-                time = getTime(datetime.now())
+                time = get_time(datetime.now())
                 embed=make_embed(
                     name = i['name'],
                     distance = i['distance'],
@@ -85,6 +85,6 @@ async def on_ready():
                 print(f"{time} | ✅ | Nouvel Item Envoyé ( {i['name']} )")
 
         await change_presence(total = len(sent_items))
-        await asyncio.sleep(INTERVAL)
+        await asyncio.sleep(60)
 
 client.run(TOKEN)

@@ -29,4 +29,8 @@ Après avoir configuré le robot dans le fichier `config.py` :
 python bot.py
 ```
 
+### Discord :
 ![resultat](https://i.ibb.co/cNt2XtQ/Capture-d-cran-2023-01-18-213332.png)
+
+### Terminal :
+![resultat_console](https://i.ibb.co/QndbXmn/Capture-d-cran-2023-01-19-083431.png)
