@@ -10,7 +10,7 @@ git clone https://github.com/ValentinLvrr/Geev-Bot
 cd Geev-Bot
 ```
 
-### 2: Edit `config.py`
+### 2: Edit [`config.py`](https://github.com/ValentinLvrr/Geev-Bot/blob/master/config.py)
 ![searchbar_geev](https://i.ibb.co/5ngn2Z6/Capture-d-cran-2023-01-18-213025.png)
 ```py
 DISTANCE = str(15000)# 15km
